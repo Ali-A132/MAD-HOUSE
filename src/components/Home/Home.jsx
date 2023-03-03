@@ -19,37 +19,26 @@ import './Home.css';
 
 function Home() {
 
-  const scrollToTop = () => {
-    window.scrollTo(0, 0)
-}
-
-function youtube_parser(url){
-  var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
-  var match = url.match(regExp);
-  return (match&&match[7].length==11)? match[7] : false;
-}
-
-const inputUrlRef = useRef();
-const [urlResult, setUrlResult] = useState(null);
-
-const handleSubmit = (e) => {
-  e.preventDefault()
-  const youtubeID = youtube_parser(inputUrlRef.current.value);
-  
-  const options = {
-    // ASK THE USER
-    },
-    params: {
-      id: youtubeID
-    }
+    const scrollToTop = () => {
+      window.scrollTo(0, 0)
   }
-  axios(options)
-    .then(res => setUrlResult(res.data.link))
-    .catch(err => console.log(err))
 
-  inputUrlRef.current.value = '';
+  function youtube_parser(url){
+    var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+    var match = url.match(regExp);
+    return (match&&match[7].length==11)? match[7] : false;
+  }
 
-}
+  const inputUrlRef = useRef();
+  const [urlResult, setUrlResult] = useState(null);
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const youtubeID = youtube_parser(inputUrlRef.current.value);
+    
+    }
+
+  
   return (
     <div className="App">
 
@@ -136,6 +125,7 @@ Feel free to go navigate the site and have fun!</h3>
 </div>
   );
 }
+
 
 export default Home;
 

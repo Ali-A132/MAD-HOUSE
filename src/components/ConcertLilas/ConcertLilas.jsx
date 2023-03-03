@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import {useState} from 'react';
-import {storage} from "../../firebase";
-import {ref, uploadBytes, listAll, getDownloadURL, refFromURL} from "firebase/storage";
+import { storage } from "../../firebase";
+import {uploadImage} from "../../models";
+import {ref, uploadBytes, listAll, getDownloadURL, refFromURL, getMetadata} from "firebase/storage";
 import {v4} from "uuid";
 import file from "../../images/filePic.png";
 import folder from "../../images/folder_direct.png";

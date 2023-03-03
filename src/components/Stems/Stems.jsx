@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import {useState} from 'react';
-import {storage} from "../../firebase";
-import {ref, uploadBytes, listAll, getDownloadURL, refFromURL} from "firebase/storage";
+import {getStorage as storage} from "firebase/storage";
+
+
+import {ref, uploadBytes, listAll, getDownloadURL, refFromURL, getMetadata} from "firebase/storage";
 import {v4} from "uuid";
 import grip from "../../images/dragon.png";
 import file from "../../images/filePic.png";
@@ -125,7 +127,7 @@ known about him.
                     <div class = "filePicture_text3">MP3</div>
                </div>
 
-               {/* <input class="upload_box" type="file" onChange={(event) => {setImageUpload(event.target.files[0]);}}/> */}
+               <input class="upload_box" type="file" onChange={(event) => {setImageUpload(event.target.files[0]);}}/>
                <button class = "submission" onClick={uploadImage}>Upload</button>
                <div class = "marginal_plus"></div>
                <div class = "instruction">If you want to add to this database, feel free to browse your local files and upload onto our
