@@ -63,7 +63,7 @@ const Stems = () => {
                     <div class = "name_display">Type</div>
                </div>
 
-               <input class="upload_box" type="file" onChange={(event) => {setImageUpload(event.target.files[0]);}}/>
+               {/* <input class="upload_box" type="file" onChange={(event) => {setImageUpload(event.target.files[0]);}}/> */}
                <button class = "submission" onClick={uploadImage}>Upload</button>
                <div class = "marginal_plus"></div>
                <div class = "instruction">If you want to add to this database, feel free to browse your local files and upload onto our
