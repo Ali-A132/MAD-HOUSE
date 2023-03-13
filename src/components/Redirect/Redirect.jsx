@@ -4,7 +4,8 @@ import './Redirect.css';
 const Redirect = () => {
      return (
           <section id="direct">
-               <h1>Bye!!!!!</h1>
+               <h1>Bygkkmnnnnnse!!!!!</h1>
+               <div>hiiiiii</div>
           </section>
      );
 };
