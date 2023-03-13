@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+
+import React, { Component } from 'react';
+import { BrowserRouter as Router, 
+  Route, Routes,  Redirect, Link, BrowserRouter, useNavigate } from "react-router-dom";
+import conversion from './components/Conversion/Conversion';
+import Redirection from './components/Redirect/Redirect';
+import flipbook from "./images/giphyrecord.gif";
+import album from "./images/album.jpg";
+import madhouseLogo from "./images/madhouseLogo.png";
 import './App.css';
+import Home from './components/Home/Home';
+
+// import Conversion from './components/Conversion/Conversion';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section>
+      <Routes>
+        <Route exact path = "/" element = {<Home/>}/>
+        <Route exact path = "/redirect" element = {<Redirection/>}></Route>
+
+      </Routes>
+    </section>
+
   );
 }
 
 export default App;
+
+// submit upload button
+{/* <input type="file" id="actual-btn"/>
+
+
+<label for="actual-btn"></label> */}
