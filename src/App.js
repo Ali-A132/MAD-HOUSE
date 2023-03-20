@@ -4,6 +4,7 @@ import { BrowserRouter as Router,
   Route, Routes,  Redirect, Link, BrowserRouter, useNavigate } from "react-router-dom";
 import conversion from './components/Conversion/Conversion';
 import Redirection from './components/Redirect/Redirect';
+import Interview from './components/Interview/Interview';
 import flipbook from "./images/giphyrecord.gif";
 import album from "./images/album.jpg";
 import madhouseLogo from "./images/madhouseLogo.png";
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route exact path = "/" element = {<Home/>}/>
         <Route exact path = "/redirect" element = {<Redirection/>}></Route>
+        <Route exact path = "/interview" element = {<Interview/>}></Route>
 
       </Routes>
     </section>
