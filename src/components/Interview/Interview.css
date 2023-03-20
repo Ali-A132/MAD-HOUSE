@@ -1,0 +1,160 @@
+.Interview {
+    background-color: #EDDBB9;
+    overflow-x: hidden;
+    min-height: 800px;
+}
+
+.name_display_title {
+    display: flex;
+    flex-direction: row;
+    transform: translate(0%, -750%);
+}
+
+.folder_int {
+    transform: translate(200%, -175%) scale(0.5);
+}
+
+.int_text {
+    transform: translate(73%, -1240%);
+    font-size: 32px;
+    font-family: monospace;
+}
+
+.bio1 {
+    font-size: 32px;
+    width: 800px;
+    height: 390px;
+    font-family: monospace;
+    transform: translate(71%, -108%);
+}
+
+.name_display1 {
+    font-size: 24px;
+    margin-left: 220px;
+    position: relative;
+    margin-top: 30px;
+    font-weight: 100;
+    font-family: 'Inconsolata', monospace;
+    text-decoration: none;
+}
+
+.name_display2 {
+    font-size: 24px;
+    margin-left: 650px;
+    position: relative;
+    margin-top: 30px;
+    font-weight: 100;
+    font-family: 'Inconsolata', monospace;
+    text-decoration: none;
+}
+
+.name_display {
+    font-size: 24px;
+    margin-left: 250px;
+    position: relative;
+    margin-top: 30px;
+    font-weight: 100;
+    font-family: 'Inconsolata', monospace;
+    text-decoration: none;
+}
+
+.filePicture_text1 {
+    font-size: 24px;
+    margin-left: 40px;
+    position: relative;
+    margin-top: 30px;
+    font-weight: 100;
+    font-family: 'Inconsolata', monospace;
+    text-decoration: none;
+}
+
+.filePicture_text2 {
+    font-size: 24px;
+    margin-left: 220px;
+    position: relative;
+    margin-top: 30px;
+    font-weight: 100;
+    font-family: 'Inconsolata', monospace;
+    text-decoration: none;
+}
+
+.filePicture_text3 {
+    font-size: 24px;
+    margin-left: 230px;
+    position: relative;
+    margin-top: 30px;
+    font-weight: 100;
+    font-family: 'Inconsolata', monospace;
+    text-decoration: none;
+}
+
+.filePicture_text4 {
+    font-size: 24px;
+    margin-left: 125px;
+    position: relative;
+    margin-top: 30px;
+    font-weight: 100;
+    font-family: 'Inconsolata', monospace;
+    text-decoration: none;
+}
+
+.filePicture_text5 {
+    font-size: 24px;
+    margin-left: 230px;
+    position: relative;
+    margin-top: 30px;
+    font-weight: 100;
+    font-family: 'Inconsolata', monospace;
+    text-decoration: none;
+}
+
+.filePicture_text6 {
+    font-size: 24px;
+    margin-left: 214px;
+    position: relative;
+    margin-top: 30px;
+    font-weight: 100;
+    font-family: 'Inconsolata', monospace;
+    text-decoration: none;
+}
+
+.filePicture_text7 {
+    font-size: 24px;
+    margin-left: 206px;
+    position: relative;
+    margin-top: 30px;
+    font-weight: 100;
+    font-family: 'Inconsolata', monospace;
+    text-decoration: none;
+}
+
+.file_row {
+    display: flex;
+    flex-direction: row;
+    transform: translate(5%, -390%);
+}
+
+.marginal {
+    margin: 50px;
+}
+
+.upload_box {
+    transform: translate(0%, -550%);
+    text-align: center;
+    font-family: monospace;
+    border-radius: 20px;
+    color: #000000;
+    font-size: 26px;
+    font-weight: 100;
+    margin-bottom: 50px;
+    margin-top: 60px;
+    width: 186px;
+    height: 66px;
+    background-color: #45E986;
+    padding-top: 20px;
+    margin-left: 80px;
+}
+
+.filePicture1 {
+    transform: translate(75%, -300%);
+}
