@@ -27,6 +27,8 @@
     scroll-behavior: smooth;
 }
 
+
+
 .navbar__homepage {
     float: right;
     margin-top: 10px;
@@ -140,6 +142,16 @@
     font-size: 24px;
 }
 
+.paragraph__title {
+    margin-top: 45px;
+    text-align: center;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: consolas;
+    font-size: 20px;
+}
+
 .box__artists {
     margin-bottom: 50px;
     margin-top: 40px;
@@ -177,6 +189,7 @@
     font-weight: lighter;
     margin-bottom: 50px;
     margin-top: 40px;
+    border-radius: 31px;
 }
 
 .box__artists__done {
@@ -213,3 +226,51 @@ ul {
   display: block;
 }
 
+
+  .navbar_new {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #977DE1;
+    color: #fff;
+    height: 60px;
+    padding: 0 20px;
+  }
+  
+  .navbar-items {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-item {
+    margin-right: 100px;
+  }
+  
+  .navbar-item:last-child {
+    margin-right: 0;
+  }
+  
+  .navbar-item a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .navbar-item a:hover {
+    color: #ccc;
+  }
+  
+  .navbar-arrow {
+    font-size: 24px;
+    margin-right: 20px;
+  }
+  
+  .navbar-arrow span {
+    display: inline-block;
+    transform: rotate(90deg);
+  }
+  .arrow-symbol {
+    display: inline-block;
+    transform: rotate(90deg);
+    font-size: 24px;
+  }
