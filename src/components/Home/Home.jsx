@@ -18,17 +18,6 @@ function Home() {
     <div class="navbar">
 
     </div>
-    
-    <nav>
-      <ul>
-        <li><Link to="/redirect">Death Grips</Link></li>
-      </ul>
-    </nav>
-
-  <Routes>
-    <Route path="/redirect" element={<redirect/>} />
-  </Routes> 
-
 
     <img class='flipbook1' src={flipbook}></img>
     <img class='flipbook2' src={flipbook}></img>
@@ -55,7 +44,11 @@ function Home() {
     <div class="box">
       <div class="box__artists">Daft Punk</div>
       <div class="box__artists">MF DOOM</div>
-      <a class="box__artists__done" routerLink="/daft">Death Grips</a>
+      <nav>
+        <ul>
+          <li><Link to="/redirect" class = "box__artists__done">Death Grips</Link></li>
+        </ul>
+      </nav>
       <div class="box__artists">Wu-Tang Clan</div>
       <div class="box__artists">Kanye West</div>
       <div class="box__artists">JPEGMAFIA</div>
@@ -64,6 +57,10 @@ function Home() {
       <div class="box__artists">Hiatus Kaiyote</div>
       <div class="box__artists__add">ADD MORE +</div>
     </div>
+
+    <Routes>
+      <Route path="/redirect" element={<redirect/>} />
+    </Routes> 
 
     <div class="navbar">
 
