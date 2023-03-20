@@ -110,6 +110,24 @@
     transform: scale(0.75);
 }
 
+.rounded_rect {
+    border-radius: 31px;
+    margin-bottom: 200px;
+    background-color: #977DE1;
+    height: 75px;
+    padding-top: 10px;
+    width: 526px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: consolas;
+    color: white;
+    font-size: 48px;
+    font-weight: lighter;
+    margin-bottom: 50px;
+    margin-top: -30px;
+}
+
 .divider__ac {
     width: 80%;
     text-align: center;

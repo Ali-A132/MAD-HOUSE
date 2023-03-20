@@ -45,7 +45,14 @@ function Home() {
     <div class="album__collage">
     <img class="collage" src={album}></img>
     </div>
-  
+
+    <div class = "rounded_rect"><b>About This Project</b></div>
+    
+
+    <center>
+    <h1 style = {{textAlign: "center", maxWidth: 1035, fontFamily: "consolas", paddingBottom: "40px"}}>This project was built with React, Node.js, JavaScript, HTML/CSS and with the Youtube API. This project came about because of our passion for music and wanting to make a project that could help in our day to day. The purpose of this project is to archive an artist's history and see their evolution over time whether it be through sound or personality. Just paste the YouTube URL above to convert it to MP3 and if you want to store it, just head on down to 'Artist Pages' and select the musician, click the category, and upload it in the archive.</h1>
+    </center>
+
     <div class ="divider">
       <hr class="divider__ac"></hr>
     </div>
