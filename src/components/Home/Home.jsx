@@ -15,8 +15,25 @@ function Home() {
     <div className="App">
       
 
-    <div class="navbar">
 
+      <div className="navbar_new">
+      <div className="navbar-items">
+        <div className="navbar-item">
+          <a href="#">About</a>
+        </div>
+        <div className="navbar-item">
+          <a href="#">Code</a>
+        </div>
+        <div className="navbar-item">
+          <a href="#">Contact</a>
+        </div>
+        <div className="navbar-item">
+          <a href="#">Album Covers</a>
+        </div>
+      </div>
+      <div className="navbar-arrow">
+      <span className="arrow-symbol">&gt;</span>
+      </div>
     </div>
 
     <img class='flipbook1' src={flipbook}></img>
@@ -30,6 +47,11 @@ function Home() {
         </div>
       </div>
     </div>
+
+    <h3 class="paragraph__title">Welcome to the MAD (My-Artist-Database) House website! This site serves two purposes, it acts
+as an archive for our favourite artists interviews, concerts, and unreleased music. It also 
+converts YouTube videos by their URL into MP3 files for the purpose of storage/archival.
+Feel free to go navigate the site and have fun!</h3>
 
     <div class="album__collage">
     <img class="collage" src={album}></img>
