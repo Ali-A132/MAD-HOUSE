@@ -102,7 +102,10 @@ known about him.
                <div class = "evenal"></div>
                {imageList.map((url) => {
                     let link = new String(url + "\n");
-                    return <a class = "linked" href = {url} target= "blank">{(link)}</a>
+                    const filename = link.split('/').pop().split('?')[0];
+                    const decodedString = decodeURIComponent(filename);
+                    const filename1 = decodedString.split('/').pop();
+                    return <a class = "linked" href = {url} target= "blank">{(filename1)}</a>
                     //<img src={url}/>;
                })}
 
