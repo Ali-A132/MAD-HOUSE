@@ -1,0 +1,211 @@
+.Interview {
+    background-color: #EDDBB9;
+    overflow-x: hidden;
+}
+
+.name_display_title {
+    display: flex;
+    flex-direction: row;
+    transform: translate(0%, -750%);
+}
+
+.folder_int {
+    transform: translate(200%, -175%) scale(0.5);
+}
+
+.int_text {
+    transform: translate(73%, -1240%);
+    font-size: 32px;
+    font-family: monospace;
+}
+
+.bio1 {
+    font-size: 32px;
+    width: 800px;
+    height: 390px;
+    font-family: monospace;
+    transform: translate(71%, -108%);
+}
+
+.name_display5 {
+    position: absolute;
+    font-size: 16px;
+    margin-top: 36px;
+    margin-left: 90px;
+    font-family: monospace;
+}
+
+.name_display1 {
+    font-size: 24px;
+    margin-left: 216px;
+    position: absolute;
+    margin-top: 30px;
+    font-weight: 100;
+    font-family: 'Inconsolata', monospace;
+    text-decoration: none;
+}
+
+.name_display2 {
+    font-size: 24px;
+    margin-left: 925px;
+    position: relative;
+    margin-top: 30px;
+    font-weight: 100;
+    font-family: monospace;
+    text-decoration: none;
+}
+
+.name_display {
+    font-size: 24px;
+    margin-left: 250px;
+    position: relative;
+    margin-top: 30px;
+    font-weight: 100;
+    font-family: 'Inconsolata', monospace;
+    text-decoration: none;
+}
+
+.filePicture_text1 {
+    font-size: 24px;
+    margin-left: 40px;
+    position: relative;
+    margin-top: 30px;
+    font-weight: 100;
+    font-family: 'Inconsolata', monospace;
+    text-decoration: none;
+}
+
+.filePicture_text2 {
+    font-size: 24px;
+    margin-left: 220px;
+    position: relative;
+    margin-top: 30px;
+    font-weight: 100;
+    font-family: 'Inconsolata', monospace;
+    text-decoration: none;
+}
+
+.filePicture_text3 {
+    font-size: 24px;
+    transform: translate(2920%);
+    position: absolute;
+    margin-top: 30px;
+    font-weight: 100;
+    font-family: 'Inconsolata', monospace;
+    text-decoration: none;
+}
+
+.filePicture_text4 {
+    font-size: 24px;
+    transform: translate(1070%);
+    position: relative;
+    margin-top: 30px;
+    font-weight: 100;
+    font-family: 'Inconsolata', monospace;
+    text-decoration: none;
+    position: absolute;
+}
+
+.filePicture_text5 {
+    font-size: 24px;
+    margin-left: 230px;
+    position: relative;
+    margin-top: 30px;
+    font-weight: 100;
+    font-family: 'Inconsolata', monospace;
+    text-decoration: none;
+}
+
+.filePicture_text6 {
+    font-size: 24px;
+    margin-left: 214px;
+    position: relative;
+    margin-top: 30px;
+    font-weight: 100;
+    font-family: 'Inconsolata', monospace;
+    text-decoration: none;
+}
+
+.filePicture_text7 {
+    font-size: 24px;
+    margin-left: 206px;
+    position: relative;
+    margin-top: 30px;
+    font-weight: 100;
+    font-family: 'Inconsolata', monospace;
+    text-decoration: none;
+}
+
+.file_row {
+    display: flex;
+    flex-direction: row;
+    transform: translate(5%, -390%);
+}
+
+.marginal {
+    margin: 50px;
+}
+
+.upload_box {
+    transform: translate(0%, -550%);
+    text-align: center;
+    font-family: monospace;
+    border-radius: 20px;
+    color: #000000;
+    font-size: 26px;
+    font-weight: 100;
+    margin-bottom: 50px;
+    margin-top: 60px;
+    width: 186px;
+    height: 70px;
+    background-color: #45E986;
+    padding-top: 20px;
+    margin-left: 80px;
+    position: absolute;
+}
+
+.upload_box::before {
+    content: 'Browse               ';
+    margin-left: 43px;
+    font-size: 30px;
+}
+
+.submission {
+    transform: translate(150%, -465%);
+    text-align: center;
+    font-family: monospace;
+    font-size: 26px;
+    background-color: #41acee;
+    color: #ffffff;
+    border-color: #41acee;
+    border-radius: 20px;
+    height: 70px;
+    width: 200px;
+    font-family: monospace;
+    position: absolute;
+}
+
+.submission:hover {
+    background-color: #109ff8; /* Green */
+    color: rgb(0, 0, 0);
+}
+
+.upload_box:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.filePicture1 {
+    transform: translate(75%, -300%);
+}
+
+.linked {
+    font-family: monospace;
+    font-size: 15px;
+    color: #9b0fe1;
+    margin-left: 80px;
+}
+
+.evenal {
+    margin-top: -200px;
+}
