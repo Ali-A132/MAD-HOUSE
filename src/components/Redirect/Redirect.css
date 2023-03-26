@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+* {
+    box-sizing: border-box;
+}
+
+.direct {
+    background-color: #EDDBB9;
+}
+
+.wrapper {
+    padding: 20px;
+}
+
+.navbar {
+    height: 50px;
+    width: 100%;
+    background-color: #977DE1;
+}
+
+.grip {
+    width: 450px;
+    height: 450px;
+    margin-left: 65px;
+    transform: translate(0%, -10%);
+}
+
+.name_title {
+    background-color: #977DE1;
+    width: fit-content;
+    height: 85px;
+    margin-left: 570px;
+    transform: translate(0%, 50%);
+}
+
+.name_title_text {
+    font-size: 48px;
+    font-family: monospace;
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    transform: translate(0%, 20%);
+}
+
+.bio {
+    width: 750px;
+    height: 390px;
+    font-size: 26px;
+    font-family: monospace;
+    transform: translate(76%, -98%);
+}
+
+.folder_title {
+    margin-top: -350px;
+    margin-left: 65px;
+    background-color: #977DE1;
+    width: fit-content;
+    height: 85px;
+}
+
+.folder_title_text {
+    font-size: 32px;
+    font-family: monospace;
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    transform: translate(0%, 60%);
+}
+
+.folder_pic {
+    margin-top: 50px;
+    transform: translate(40%);
+}
+
+.concert_box {
+    margin-left: 440px;
+    transform: translate(0%, 3%);
+}
+
+.folder_title2 {
+    margin-top: -350px;
+    margin-left: 65px;
+    background-color: #977DE1;
+    width: 288px;
+    height: 83px;
+}
+
+.folder_title_text2 {
+    font-size: 32px;
+    font-family: monospace;
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    transform: translate(5%, 10%);
+}
+
+.unreleased_box {
+    margin-top: 400px;
+    margin-left: 5px;
+}
+
+.stem_box {
+    margin-left: 440px;
+    margin-top: 13px;
+    margin-bottom: 150px;
+}
+
+.flipper {
+    transform: translate(240%, -100%) rotate(-30deg);
+    position: absolute;
+}
+
+.artist_ride {
+    transform: translate(240%, -5%);
+    position: absolute;
+}
