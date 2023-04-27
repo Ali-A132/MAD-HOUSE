@@ -3,22 +3,22 @@ import {useState} from 'react';
 import {storage} from "../../firebase";
 import {ref, uploadBytes, listAll, getDownloadURL, refFromURL} from "firebase/storage";
 import {v4} from "uuid";
-import grip from "../../images/bottomlessPit.png";
+import grip from "../../images/LilasIkuta.png";
 import file from "../../images/filePic.png";
 import folder from "../../images/folder_direct.png";
 import adultSwim from "../../database/Earth Angel (Androgynous Mind).mp3";
-import pitchFork from "../../database/FAB (Demo).mp3";
+import pitchFork from "../../database/Sweet memories - 幾田りら · Rira Ikuta (ver) Instrumental cover (1).mp3";
 import clash from "../../database/lostClashMusicInterview.jpg";
 //lostClashMusicInterview.jpg
-import './Unreleased.css';
+import './UnreleasedLilas.css';
 
 const Unreleased = () => {
      const [imageUpload, setImageUpload] = useState(null);
      const [imageList, setImageList] = useState([]);
-     const imageListRef = ref(storage, 'unreleased/');
+     const imageListRef = ref(storage, 'unreleasedLilas/');
      const uploadImage = () => {
           if (imageUpload == null) return;
-          const imageRef = ref(storage, ('unreleased/' + imageUpload.name))
+          const imageRef = ref(storage, ('unreleasedLilas/' + imageUpload.name))
           uploadBytes(imageRef, imageUpload).then((snapshot) => {
                alert("File Uploaded");
                getDownloadURL(snapshot.ref).then((url) => {
@@ -44,22 +44,14 @@ const Unreleased = () => {
           <div className="Interview">
                            <div class="navbar"></div>
                <div class="name_title">
-                    <div class = "name_title_text">Death Grips</div>
+                    <div class = "name_title_text">Lilas Ikuta</div>
                </div>
 
                <img class="grip" src={grip}></img>
 
                <img class="folder_int" src={folder}></img>
                <div class = "int_text">Unreleased/Mixtapes</div>
-               <div class="bio1">Stefan Burnett, Andy Morin, and Zach Hill
-are not very well known for doing interviews
-and its contributed to the mystique of Death 
-Grips and not much is known about their personal
-lives. With the exception of Zach Hill’s 
-involvement in the band Hella, Andy Morin’s 
-running the label A2B2, Ride (Stefan Burnett) 
-does not have social media and not much is 
-known about him.
+               <div class="bio">Lilas Ikuta, performing under the stage name Ikura in Yoasobi, is a singer-songwriter and a then-member of the cover group Plusonica from 2017 to 2021. She released her solo demo CD: 15 no Omoi (2016), and two EPs: Rerise (2018) and Jukebox (2019) through independent label After School. Performing under the stage name Ikura in Yoasobi, is a singer-songwriter and a then-member of the cover group Plusonica from 2017 to 2021. She released her solo demo CD: 15 no Omoi (2016), and two EPs.
 
 </div>
 
@@ -75,25 +67,9 @@ known about him.
                          <img class="filePicture" src={file}></img>
                          </a>
                     <div class = "filePicture_text1">
-                         <a href= {pitchFork} target="_blank">Demo Of FAB</a> 
+                         <a href= {pitchFork} target="_blank">Sweet memories - 幾田りら (Instrumental cover)</a> 
                     </div>
-                    <div class = "filePicture_text4">9.00MB</div>
-                    <div class = "filePicture_text3">MP3</div>
-               </div>
-
-               <div class = "marginal"></div>
-
-               <div class = "marginal"></div>
-
-               <div class = "file_row">
-
-                    <a href={adultSwim} download>
-                         <img class="filePicture" src={file}></img>
-                    </a>
-                    <div class = "filePicture_text1">
-                         <a href = {adultSwim} target="_blank">Earth Angel (Androgynous Mind)</a>
-                    </div>
-                    <div class = "filePicture_text4">5.96MB</div>
+                    <div class = "filePicture_text4">4.70MB</div>
                     <div class = "filePicture_text3">MP3</div>
                </div>
 

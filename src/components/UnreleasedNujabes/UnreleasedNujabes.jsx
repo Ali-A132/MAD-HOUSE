@@ -3,22 +3,22 @@ import {useState} from 'react';
 import {storage} from "../../firebase";
 import {ref, uploadBytes, listAll, getDownloadURL, refFromURL} from "firebase/storage";
 import {v4} from "uuid";
-import grip from "../../images/bottomlessPit.png";
+import grip from "../../images/NujabesAlbum.png";
 import file from "../../images/filePic.png";
 import folder from "../../images/folder_direct.png";
-import adultSwim from "../../database/Earth Angel (Androgynous Mind).mp3";
-import pitchFork from "../../database/FAB (Demo).mp3";
+import adultSwim from "../../database/Nujabes - Kumomi.mp4";
+import pitchFork from "../../database/Nujabes - Feather (feat. Cise Starr & Akin from CYNE) [Official Audio]_hQ5x8pHoIPA.mp3";
 import clash from "../../database/lostClashMusicInterview.jpg";
 //lostClashMusicInterview.jpg
-import './Unreleased.css';
+import './UnreleasedNujabes.css';
 
 const Unreleased = () => {
      const [imageUpload, setImageUpload] = useState(null);
      const [imageList, setImageList] = useState([]);
-     const imageListRef = ref(storage, 'unreleased/');
+     const imageListRef = ref(storage, 'unreleasedNujabes/');
      const uploadImage = () => {
           if (imageUpload == null) return;
-          const imageRef = ref(storage, ('unreleased/' + imageUpload.name))
+          const imageRef = ref(storage, ('unreleasedNujabes/' + imageUpload.name))
           uploadBytes(imageRef, imageUpload).then((snapshot) => {
                alert("File Uploaded");
                getDownloadURL(snapshot.ref).then((url) => {
@@ -44,22 +44,14 @@ const Unreleased = () => {
           <div className="Interview">
                            <div class="navbar"></div>
                <div class="name_title">
-                    <div class = "name_title_text">Death Grips</div>
+                    <div class = "name_title_text">Nujabes</div>
                </div>
 
                <img class="grip" src={grip}></img>
 
                <img class="folder_int" src={folder}></img>
                <div class = "int_text">Unreleased/Mixtapes</div>
-               <div class="bio1">Stefan Burnett, Andy Morin, and Zach Hill
-are not very well known for doing interviews
-and its contributed to the mystique of Death 
-Grips and not much is known about their personal
-lives. With the exception of Zach Hill’s 
-involvement in the band Hella, Andy Morin’s 
-running the label A2B2, Ride (Stefan Burnett) 
-does not have social media and not much is 
-known about him.
+               <div class="bio">Jun Seba (Japanese: 瀬葉 淳, Hepburn: Seba Jun, February 7, 1974 – February 26, 2010), better known by his stage name Nujabes (ヌジャベス, Nujabesu), was a Japanese record producer, audio engineer, DJ, composer and arranger best known for his atmospheric instrumental mixes sampling from hip hop, soul, and jazz, as well as incorporating elements of trip hop, breakbeat, downtempo, and ambient music.Seba released two studio albums during his lifetime: Metaphorical Music (2003) and Modal Soul (2005).
 
 </div>
 
@@ -75,9 +67,9 @@ known about him.
                          <img class="filePicture" src={file}></img>
                          </a>
                     <div class = "filePicture_text1">
-                         <a href= {pitchFork} target="_blank">Demo Of FAB</a> 
+                         <a href= {pitchFork} target="_blank">Nujabes - Feather (feat. Cise Starr & Akin)</a> 
                     </div>
-                    <div class = "filePicture_text4">9.00MB</div>
+                    <div class = "filePicture_text4">2.80MB</div>
                     <div class = "filePicture_text3">MP3</div>
                </div>
 
@@ -91,10 +83,10 @@ known about him.
                          <img class="filePicture" src={file}></img>
                     </a>
                     <div class = "filePicture_text1">
-                         <a href = {adultSwim} target="_blank">Earth Angel (Androgynous Mind)</a>
+                         <a href = {adultSwim} target="_blank">Nujabes - Kumomi</a>
                     </div>
-                    <div class = "filePicture_text4">5.96MB</div>
-                    <div class = "filePicture_text3">MP3</div>
+                    <div class = "filePicture_text4">4.53MB</div>
+                    <div class = "filePicture_text3">MP4</div>
                </div>
 
                <input class="upload_box" type="file" onChange={(event) => {setImageUpload(event.target.files[0]);}}/>
