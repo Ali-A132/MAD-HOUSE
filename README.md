@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+<h1 align="center">
+Welcome to MAD-HOUSE!
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+<img src="https://user-images.githubusercontent.com/91800364/234785847-977d1e08-dc55-40fd-9cb7-1ab85b7a176f.gif" width="250"</img>
+</div>
 
-## Available Scripts
+<hr/>
 
-In the project directory, you can run:
+Welcome to the MAD (My-Artist-Database) House website! This site serves two purposes, it acts as an archive for our favourite artists interviews, concerts, and unreleased music. It also converts YouTube videos by their URL into MP3 files for the purpose of storage/archival. Feel free to go navigate the site and have fun!
 
-### `npm start`
+This project was built with React, Node.js, JavaScript, HTML/CSS and with the Youtube Rapid API. This project came about because of our passion for music and wanting to make a project that could help in our day to day. The purpose of this project is to archive an artist's history and see their evolution over time whether it be through sound or personality. Just paste the YouTube URL above to convert it to MP3 and if you want to store it, just head on down to 'Artist Pages' and select the musician, click the category, and upload it in the archive.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<hr/>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Technologies
+======================
 
-### `npm test`
+- React Framework 
+  - Browser Router, react-icons, Link
+- Node.js
+- npm
+- Git / GitHub
+- Firebase
+  - Authentication
+  - Hosting
+  - Cloud Storage
+- JavaScript
+- HTML/CSS
+- Figma
+- YouTube Rapid API
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Contributors
 
-### `npm run build`
+- [Leonardo Moodly](https://github.com/LeoMoodley)<br/>
+- [Ali Akbar](https://github.com/Ali-A132)<br/>
+- [Brandon Tran](https://github.com/BrandonTran03)<br/>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Design
+The project was built with Figma and we made a bunch of rough drafts of our design, check it out [here!](https://www.figma.com/file/3RpXut10IXH5lzHFd0cQWq/MAD-HOUSE-Design?node-id=502%3A135&t=6ChDhob34XaMEKY9-1)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## How To Use
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Simply clone this repo, and run
+`npm install` in the created directory.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Once that's done, run either
+`npm run` OR `npm start`
