@@ -42,12 +42,13 @@
     transform: translate(0%, 20%);
 }
 
-.bio2 {
+.bio {
     width: 750px;
     height: 390px;
     font-size: 26px;
     font-family: monospace;
     transform: translate(76%, -98%);
+    margin-top: 20px;
 }
 
 .folder_title {

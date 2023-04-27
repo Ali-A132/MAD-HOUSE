@@ -1,11 +1,11 @@
 import React from 'react';
-import './Redirect.css';
+import './RedirectNujabes.css';
 import { BrowserRouter as Router, 
      Route, Routes, Link, BrowserRouter, useNavigate } from "react-router-dom";
-import grip from "../../images/exmilitary.jpg";
+import grip from "../../images/NujabesAlbum.png";
 import folder from "../../images/folder_direct.png";
 import flipbook from "../../images/flipbook.gif";
-import frontman from "../../images/frontman_ride.png";
+import frontman from "../../images/Nujabes.png";
 
 const Redirect = () => {
      const scrollToTop = () => {
@@ -15,19 +15,19 @@ const Redirect = () => {
           <div className="direct">
                <div class="navbar"></div>
                <div class="name_title">
-                    <div class = "name_title_text">Death Grips</div>
+                    <div class = "name_title_text">Nujabes</div>
                </div>
 
                <img class="grip" src={grip}></img>
 
-               <div class="bio2">Death Grips is an American experimental hip hop group formed in 2010 in Sacramento, California. The group consists of Stefan Burnett, also known as MC Ride (vocals, lyrics), Zach Hill (drums, production, lyrics), and Andy Morin (keyboards, production, lyrics).Though he is not the group's frontman, Hill has been credited with being the driving creative force behind the project.Drawing from punk rock, electronic, noise, and industrial styles, the band's innovative and often difficult-to-categorize sound has earned critical acclaim and a cult following.</div>
+               <div class="bio2">Jun Seba (Japanese: 瀬葉 淳, Hepburn: Seba Jun, February 7, 1974 – February 26, 2010), better known by his stage name Nujabes (ヌジャベス, Nujabesu), was a Japanese record producer, audio engineer, DJ, composer and arranger best known for his atmospheric instrumental mixes sampling from hip hop, soul, and jazz, as well as incorporating elements of trip hop, breakbeat, downtempo, and ambient music.Seba released two studio albums during his lifetime: Metaphorical Music (2003) and Modal Soul (2005).</div>
 
                <div class = "folder_title">
    
                     <div class = "folder_title_text">Interview Clips</div>
                </div>
 
-                    <Link to="/interview" class = "box__artists__done">
+                    <Link to="/interviewNujabes" class = "box__artists__done">
                          <img onClick={scrollToTop} class="folder_pic" src={folder}></img>
                     </Link>
                
@@ -38,7 +38,7 @@ const Redirect = () => {
                     </div>
 
                     
-                    <Link to="/concert" class = "box__artists__done">
+                    <Link to="/concertNujabes" class = "box__artists__done">
                          <img  onClick={scrollToTop} class="folder_pic" src={folder}></img>
                     </Link>
  
@@ -55,7 +55,7 @@ const Redirect = () => {
                          <div class = "folder_title_text2">Mixtapes</div>
                     </div>
 
-                    <Link to="/unreleased" class = "box__artists__done">
+                    <Link to="/unreleasedNujabes" class = "box__artists__done">
                          <img onClick={scrollToTop} class="folder_pic" src={folder}></img>
                     </Link>
 
@@ -68,7 +68,7 @@ const Redirect = () => {
                     </div>
 
 
-                    <Link to="/stems" class = "box__artists__done">
+                    <Link to="/stemsNujabes" class = "box__artists__done">
                          <img onClick={scrollToTop} class="folder_pic" src={folder}></img>
                     </Link>
                </div>
