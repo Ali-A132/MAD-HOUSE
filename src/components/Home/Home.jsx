@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react';
+import { useRef, useState } from 'react';
 import { BrowserRouter as Router, 
   Route, Routes,  Redirect, Link, BrowserRouter, useNavigate } from "react-router-dom";
 import { BsArrowDown } from 'react-icons/bs';
@@ -9,6 +10,10 @@ import flipbook from "../../images/giphyrecord.gif";
 import album from "../../images/album.jpg";
 import madhouseLogo from "../../images/madhouseLogo.png";
 import titles from "../../images/topsters2(4).jpg";
+import mag from "../../images/magnify.png"
+import { youtube_parser } from "../../utils";
+import axios from 'axios';
+
 import './Home.css';
 // import Conversion from './components/Conversion/Conversion';
 
@@ -16,6 +21,38 @@ function Home() {
 
   const scrollToTop = () => {
     window.scrollTo(0, 0)
+}
+
+function youtube_parser(url){
+  var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+  var match = url.match(regExp);
+  return (match&&match[7].length==11)? match[7] : false;
+}
+
+const inputUrlRef = useRef();
+const [urlResult, setUrlResult] = useState(null);
+
+const handleSubmit = (e) => {
+  e.preventDefault()
+  const youtubeID = youtube_parser(inputUrlRef.current.value);
+  
+  const options = {
+    method: 'GET',
+    url: 'https://youtube-mp36.p.rapidapi.com/dl',
+    headers: {
+      'X-RapidAPI-Key': '9105cb17a2msha19110b0c8d1649p159fa7jsn35d43e4ee409',
+      'X-RapidAPI-Host': 'youtube-mp36.p.rapidapi.com'
+    },
+    params: {
+      id: youtubeID
+    }
+  }
+  axios(options)
+    .then(res => setUrlResult(res.data.link))
+    .catch(err => console.log(err))
+
+  inputUrlRef.current.value = '';
+
 }
   return (
     <div className="App">
@@ -41,6 +78,16 @@ function Home() {
       </div>
     </div>
 
+    <form onSubmit={handleSubmit} className="formerer">
+          <button type="submit" className="button_submit">
+            <img src={mag} />
+          </button>
+          <input ref={inputUrlRef} placeholder="https://www.youtube.com/watch?v=tTBWfkE7BXU" className="input_text" type="text" />
+    </form>
+
+    {urlResult ? <a target='_blank' rel="noreferrer" href={urlResult} class="downloader">Download MP3</a> : ''}
+    
+
     <h3 class="paragraph__title">Welcome to the MAD (My-Artist-Database) House website! This site serves two purposes, it acts
 as an archive for our favourite artists interviews, concerts, and unreleased music. It also 
 converts YouTube videos by their URL into MP3 files for the purpose of storage/archival.
@@ -55,7 +102,7 @@ Feel free to go navigate the site and have fun!</h3>
     
 
     <center>
-    <h1 style = {{textAlign: "center", maxWidth: 1035, fontFamily: "consolas", paddingBottom: "40px"}}>This project was built with React, Node.js, JavaScript, HTML/CSS and with the Youtube API. This project came about because of our passion for music and wanting to make a project that could help in our day to day. The purpose of this project is to archive an artist's history and see their evolution over time whether it be through sound or personality. Just paste the YouTube URL above to convert it to MP3 and if you want to store it, just head on down to 'Artist Pages' and select the musician, click the category, and upload it in the archive.</h1>
+    <h1 style = {{textAlign: "center", maxWidth: 1035, fontFamily: "monospace", paddingBottom: "40px"}}>This project was built with React, Node.js, JavaScript, HTML/CSS and with the Youtube API. This project came about because of our passion for music and wanting to make a project that could help in our day to day. The purpose of this project is to archive an artist's history and see their evolution over time whether it be through sound or personality. Just paste the YouTube URL above to convert it to MP3 and if you want to store it, just head on down to 'Artist Pages' and select the musician, click the category, and upload it in the archive.</h1>
     </center>
 
     <div class ="divider">
@@ -74,10 +121,10 @@ Feel free to go navigate the site and have fun!</h3>
       </nav>
       <div class="box__artists">Wu-Tang Clan</div>
       <div class="box__artists">Kanye West</div>
-      <Link onClick={scrollToTop} to="/redirect" class = "box__artists__done">Lilas Ikuta</Link>
+      <Link onClick={scrollToTop} to="/redirectLilas" class = "box__artists__done">Lilas Ikuta</Link>
       <div class="box__artists">Danny Brown</div>
       <div class="box__artists">Tyler, The Creator</div>
-      <Link onClick={scrollToTop} to="/redirect" class = "box__artists__done">Nujabes</Link>
+      <Link onClick={scrollToTop} to="/redirectNujabes" class = "box__artists__done">Nujabes</Link>
       <div class="box__artists">Hiatus Kaiyote</div>
       <div class="box__artists__add">ADD MORE +</div>
     </div>
@@ -89,7 +136,6 @@ Feel free to go navigate the site and have fun!</h3>
     <div class="navbar" id = "bot">
 
     </div>
-
 
 </div>
   );

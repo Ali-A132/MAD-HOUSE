@@ -2,6 +2,7 @@
 
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -263,5 +264,29 @@ ul {
   scroll-behavior: smooth;
 }
 
+.input_text {
+  width: 821px;
+  height: 66px;
+  text-align: center;
+  font-size: 28px;
+  font-family: monospace;
+}
 
-  
+.formerer {
+  display:flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.button_submit {
+  background-color: white;
+  border-color: white;
+}
+
+.downloader {
+  display:flex;
+  justify-content: center;
+  margin-bottom: -20px;
+  margin-top: 10px;
+  font-size: 20px;
+}
