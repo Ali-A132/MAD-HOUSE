@@ -4,23 +4,21 @@ import {storage} from "../../firebase";
 import {uploadImage} from "../../models";
 import {ref, uploadBytes, listAll, getDownloadURL, refFromURL, getMetadata} from "firebase/storage";
 import {v4} from "uuid";
-import grip from "../../images/powersThatB.png";
+import grip from "../../images/NujabesAlbum.png";
 import file from "../../images/filePic.png";
 import folder from "../../images/folder_direct.png";
-import adultSwim from "../../database/Death Grips Interview—April 2012.mp4";
-import pitchFork from "../../database/Death Grips Interview DELETED 720p.mp4";
-import clash from "../../database/lostClashMusicInterview.jpg";
+import pitchFork from "../../database/Substantial on How He Met Nujabes.mp3";
 //lostClashMusicInterview.jpg
-import './Interview.css';
+import './InterviewNujabes.css';
 
 const Interview = () => {
 
      const [imageUpload, setImageUpload] = useState(null);
      const [imageList, setImageList] = useState([]);
-     const imageListRef = ref(storage, 'interview/');
+     const imageListRef = ref(storage, 'interviewNujabes/');
      const uploadImage = () => {
           if (imageUpload == null) return;
-          const imageRef = ref(storage, ('interview/' + imageUpload.name))
+          const imageRef = ref(storage, ('interviewNujabes/' + imageUpload.name))
           uploadBytes(imageRef, imageUpload).then((snapshot) => {
                alert("File Uploaded");
                getDownloadURL(snapshot.ref).then((url) => {
@@ -46,22 +44,14 @@ const Interview = () => {
           <div className="Interview">
                            <div class="navbar"></div>
                <div class="name_title">
-                    <div class = "name_title_text">Death Grips</div>
+                    <div class = "name_title_text">Nujabes</div>
                </div>
 
                <img class="grip" src={grip}></img>
 
                <img class="folder_int" src={folder}></img>
                <div class = "int_text">Interview Clips</div>
-               <div class="bio1">Stefan Burnett, Andy Morin, and Zach Hill
-are not very well known for doing interviews
-and its contributed to the mystique of Death 
-Grips and not much is known about their personal
-lives. With the exception of Zach Hill’s 
-involvement in the band Hella, Andy Morin’s 
-running the label A2B2, Ride (Stefan Burnett) 
-does not have social media and not much is 
-known about him.
+               <div class="bio">Japanese: 瀬葉 淳, Hepburn: Seba Jun, February 7, 1974 – February 26, 2010), better known by his stage name Nujabes (ヌジャベス, Nujabesu), was a Japanese record producer, audio engineer, DJ, composer and arranger best known for his atmospheric instrumental mixes sampling from hip hop, soul, and jazz, as well as incorporating elements of trip hop, breakbeat, downtempo, and ambient music.Seba released two studio albums during his lifetime: Metaphorical Music (2003) and Modal Soul (2005).
 
 </div>
 
@@ -77,40 +67,13 @@ known about him.
                          <img class="filePicture" src={file}></img>
                          </a>
                     <div class = "filePicture_text1">
-                         <a href= {pitchFork} target="_blank">DELETED Death Grips PitchFork Interview 2013</a> 
+                         <a href= {pitchFork} target="_blank">Substantial on How He Met Nujabes</a> 
                     </div>
-                    <div class = "filePicture_text4">52.2mb</div>
-                    <div class = "filePicture_text3">MP4</div>
+                    <div class = "filePicture_text4">2.9 MB</div>
+                    <div class = "filePicture_text3">MP3</div>
                </div>
 
-               <div class = "marginal"></div>
-
-
-               <div class = "file_row">
-
-                    <a href={adultSwim} download>
-                         <img class="filePicture" src={file}></img>
-                    </a>
-                    <div class = "filePicture_text1">
-                         <a href = {clash} target="_blank">Clash Music Death Grips Interview 2012</a>
-                    </div>
-                    <div class = "filePicture_text7">670.0kb</div>
-                    <div class = "filePicture_text6">JPG</div>
-               </div>
-
-               <div class = "marginal"></div>
-
-               <div class = "file_row">
-
-                    <a href={adultSwim} download>
-                         <img class="filePicture" src={file}></img>
-                    </a>
-                    <div class = "filePicture_text1">
-                         <a href = {adultSwim} target="_blank">Death Grips Adult Swim Interview 2012</a>
-                    </div>
-                    <div class = "filePicture_text2">10.8mb</div>
-                    <div class = "filePicture_text5">MP4</div>
-               </div>
+               
 
                <input class="upload_box" type="file" onChange={(event) => {setImageUpload(event.target.files[0]);}}/>
                <button class = "submission" onClick={uploadImage}>Upload</button>
