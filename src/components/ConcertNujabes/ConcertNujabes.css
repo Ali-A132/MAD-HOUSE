@@ -1,0 +1,11 @@
+.evenal {
+    margin-top: -120px;
+}
+
+.bio {
+    width: 750px;
+    height: 390px;
+    font-size: 26px;
+    font-family: monospace;
+    transform: translate(76%, -108%);
+}
