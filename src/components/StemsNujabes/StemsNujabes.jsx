@@ -3,23 +3,21 @@ import {useState} from 'react';
 import {storage} from "../../firebase";
 import {ref, uploadBytes, listAll, getDownloadURL, refFromURL} from "firebase/storage";
 import {v4} from "uuid";
-import grip from "../../images/dragon.png";
+import grip from "../../images/NujabesAlbum.png";
 import file from "../../images/filePic.png";
 import folder from "../../images/folder_direct.png";
-import adultSwim from "../../database/02 Hot Head (Instrumental).mp3";
-import pitchFork from "../../database/05 Hustle Bones Instrumental.mp3";
-import clash from "../../database/06 Bubbles Buried in this Jungle (Instrumental).mp3";
-import hack from "../../database/13 Hacker Instrumental.mp3";
+import adultSwim from "../../database/Nujabes- Mystline [Full Version].mp4";
+import pitchFork from "../../database/Nujabes - Counting Stars.mp4";
 //lostClashMusicInterview.jpg
-import './Stems.css';
+import './StemsNujabes.css';
 
 const Stems = () => {
      const [imageUpload, setImageUpload] = useState(null);
      const [imageList, setImageList] = useState([]);
-     const imageListRef = ref(storage, 'stems/');
+     const imageListRef = ref(storage, 'stemsNujabes/');
      const uploadImage = () => {
           if (imageUpload == null) return;
-          const imageRef = ref(storage, ('stems/' + imageUpload.name))
+          const imageRef = ref(storage, ('stemsNujabes/' + imageUpload.name))
           uploadBytes(imageRef, imageUpload).then((snapshot) => {
                alert("File Uploaded");
                getDownloadURL(snapshot.ref).then((url) => {
@@ -45,22 +43,14 @@ const Stems = () => {
           <div className="Interview">
                            <div class="navbar"></div>
                <div class="name_title">
-                    <div class = "name_title_text">Death Grips</div>
+                    <div class = "name_title_text">Nujabes</div>
                </div>
 
                <img class="grip" src={grip}></img>
 
                <img class="folder_int" src={folder}></img>
                <div class = "int_text">Stems/Instrumentals</div>
-               <div class="bio1">Stefan Burnett, Andy Morin, and Zach Hill
-are not very well known for doing interviews
-and its contributed to the mystique of Death 
-Grips and not much is known about their personal
-lives. With the exception of Zach Hill’s 
-involvement in the band Hella, Andy Morin’s 
-running the label A2B2, Ride (Stefan Burnett) 
-does not have social media and not much is 
-known about him.
+               <div class="bio">Jun Seba (Japanese: 瀬葉 淳, Hepburn: Seba Jun, February 7, 1974 – February 26, 2010), better known by his stage name Nujabes (ヌジャベス, Nujabesu), was a Japanese record producer, audio engineer, DJ, composer and arranger best known for his atmospheric instrumental mixes sampling from hip hop, soul, and jazz, as well as incorporating elements of trip hop, breakbeat, downtempo, and ambient music.Seba released two studio albums during his lifetime: Metaphorical Music (2003) and Modal Soul (2005).
 
 </div>
 
@@ -72,14 +62,14 @@ known about him.
                </div>
                <div class = "file_row">
                     
-                         <a href={pitchFork} download>
+                         <a href={adultSwim} download>
                          <img class="filePicture" src={file}></img>
                          </a>
                     <div class = "filePicture_text1">
-                         <a href= {pitchFork} target="_blank">Hustle Bones Instrumental</a> 
+                         <a href= {adultSwim} target="_blank">Nujabes- Mystline [Full Version]</a> 
                     </div>
-                    <div class = "filePicture_text4">7.26MB</div>
-                    <div class = "filePicture_text3">MP3</div>
+                    <div class = "filePicture_text4">6.97MB</div>
+                    <div class = "filePicture_text3">MP4</div>
                </div>
 
                <div class = "marginal"></div>
@@ -87,42 +77,14 @@ known about him.
 
                <div class = "file_row">
 
-                    <a href={clash} download>
+                    <a href={pitchFork} download>
                          <img class="filePicture" src={file}></img>
                     </a>
                     <div class = "filePicture_text1">
-                         <a href = {clash} target="_blank">Bubbles Buried in this Jungle (Instrumental)</a>
+                         <a href = {pitchFork} target="_blank">Nujabes - Counting Stars</a>
                     </div>
-                    <div class = "filePicture_text4">7.96MB</div>
-                    <div class = "filePicture_text3">MP3</div>
-               </div>
-
-               <div class = "marginal"></div>
-
-               <div class = "file_row">
-
-                    <a href={adultSwim} download>
-                         <img class="filePicture" src={file}></img>
-                    </a>
-                    <div class = "filePicture_text1">
-                         <a href = {adultSwim} target="_blank">Hot Head (Instrumental)</a>
-                    </div>
-                    <div class = "filePicture_text4">11.6MB</div>
-                    <div class = "filePicture_text3">MP3</div>
-               </div>
-
-               <div class = "marginal"></div>
-
-               <div class = "file_row">
-
-                    <a href={hack} download>
-                         <img class="filePicture" src={file}></img>
-                    </a>
-                    <div class = "filePicture_text1">
-                         <a href = {hack} target="_blank">Hacker Instrumental</a>
-                    </div>
-                    <div class = "filePicture_text4">10.6MB</div>
-                    <div class = "filePicture_text3">MP3</div>
+                    <div class = "filePicture_text4">4.71MB</div>
+                    <div class = "filePicture_text3">MP4</div>
                </div>
 
                <input class="upload_box" type="file" onChange={(event) => {setImageUpload(event.target.files[0]);}}/>
