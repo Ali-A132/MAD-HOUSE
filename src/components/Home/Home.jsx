@@ -37,11 +37,7 @@ const handleSubmit = (e) => {
   const youtubeID = youtube_parser(inputUrlRef.current.value);
   
   const options = {
-    method: 'GET',
-    url: 'https://youtube-mp36.p.rapidapi.com/dl',
-    headers: {
-      'X-RapidAPI-Key': '9105cb17a2msha19110b0c8d1649p159fa7jsn35d43e4ee409',
-      'X-RapidAPI-Host': 'youtube-mp36.p.rapidapi.com'
+    // ASK THE USER
     },
     params: {
       id: youtubeID
